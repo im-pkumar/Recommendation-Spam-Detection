@@ -7,7 +7,9 @@ This web based application has 5 pages:
 3. Books Recommendation
 4. News Reecommendation
 5. Movies Recommendation
+
 Which can be found under **Pages** Folder.
+
 ## To run these web-application
 1. Clone the repository with all files
 2. Install libraries:
