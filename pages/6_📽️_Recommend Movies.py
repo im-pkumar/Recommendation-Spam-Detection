@@ -8,7 +8,7 @@ head.header("Restaurant Movies Recommendation")
 
 def trainmodel():
     global df,df1
-    df = pd.read_csv(r"C:\Users\mepeeqeek\Desktop\ML COURSE\DataSets\clustering dataset\movies_collaborative.csv")
+    df = pd.read_csv("movies_collaborative.csv")
     df1 = df.pivot_table(columns="movieId",index="userId",values="rating")
     df1.fillna(0.0,inplace=True)
     global model_nn
