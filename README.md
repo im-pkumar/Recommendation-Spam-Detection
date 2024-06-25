@@ -1,4 +1,4 @@
-# Machine Learning 2nd Project- Web-Based
+# Recommendation & Spam Detection- Web-Based
 
 ## Python, Streamlit and Machine Learning based program web-application that analyses reviews, detect spam, recommend Movies, Books and News as per user input.
 This web based application has 5 pages:
