@@ -23,20 +23,20 @@ Which can be found under **Pages** Folder.
 
 ## Some screenshots of these pages are:
 #### Sample Welcome Page
-![Welcome Page](https://github.com/im-pkumar/ML-2nd-Projects/blob/main/1st%20Page.jpg)
+![Welcome Page](https://github.com/im-pkumar/Recommendation-Spam-Detection/blob/main/1st%20Page.jpg)
 
 #### Sample 1st Page
-![Restaurant Review Page](https://github.com/im-pkumar/ML-2nd-Projects/blob/main/2nd%20Page.jpg)
+![Restaurant Review Page](https://github.com/im-pkumar/Recommendation-Spam-Detection/blob/main/2nd%20Page.jpg)
 
 #### Sample 3rd Page
-![Spam Page-1](https://github.com/im-pkumar/ML-2nd-Projects/blob/main/3rd%20Page-1.jpg)
+![Spam Page-1](https://github.com/im-pkumar/Recommendation-Spam-Detection/blob/main/3rd%20Page-1.jpg)
 
 #### Sample 3rd Page
-![Spam Page-2](https://github.com/im-pkumar/ML-2nd-Projects/blob/main/3rd%20Page-2.jpg)
+![Spam Page-2](https://github.com/im-pkumar/Recommendation-Spam-Detection/blob/main/3rd%20Page-2.jpg)
 
 #### Sample Output for Books Page
-![Books Recommend](https://github.com/im-pkumar/ML-2nd-Projects/blob/main/4th%20Page.jpg)
+![Books Recommend](https://github.com/im-pkumar/Recommendation-Spam-Detection/blob/main/4th%20Page.jpg)
 
 #### Sample 5th Page
-![News Page](https://github.com/im-pkumar/ML-2nd-Projects/blob/main/5th%20Page.jpg)
+![News Page](https://github.com/im-pkumar/Recommendation-Spam-Detection/blob/main/5th%20Page.jpg)
 
