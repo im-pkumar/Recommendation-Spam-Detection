@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import re
 import pandas as pd
@@ -8,7 +9,7 @@ from sklearn.naive_bayes import MultinomialNB
 from sklearn.preprocessing import OrdinalEncoder
 
 stpwrds = stopwords.words("english")
-path = {'trainfile':'News_Category_Dataset_v3.json','logo':'logo-1.jpg'}
+path = {'trainfile':f"{os.getcwd()}/News_Category_Dataset_v3.json",'logo':f"{os.getcwd()}/logo-1.jpg"}
 
 img,head = st.columns([0.15,0.85])
 img.image(path['logo'])
@@ -27,15 +28,15 @@ def text_cleaning(heading):
 
 def trainmodel():
     global df
-    df = pd.read_json(path['trainfile'],lines=True)
+    df = pd.read_json(path['trainfile'], lines=True)
     df1 = df[['headline','category']]
     df1 = df1[df.category.isin(['ENTERTAINMENT','WELLNESS','POLITICS'])]
     ord = OrdinalEncoder()
-    yt = ord.fit_transform(df[['category']])
+    yt = ord.fit_transform(df1[['category']])
     global news_category
     news_category = ord.categories_
-    corpus = df.headline.values
-    corpus_mod = list(map(text_cleaning,corpus))
+    corpus = df1.headline.values
+    corpus_mod = list(map(text_cleaning, corpus))
     global cv
     cv = CountVectorizer()
     Xt = cv.fit_transform(corpus_mod)
@@ -52,18 +53,19 @@ def prediction(sample):
     cat = news_category[0][int(p)]
 
 def show_similar():
-    global df
-    news = df[(df.category==cat)]
-    news = news.sort_values(by=df.date,ascending=True).head()
+    global df, cat
+    news = df[(df.category == cat)]
+    news2say = news[['headline', 'date', 'category', 'authors']].head(10)
+    news2say.index= range(1,11)
     st.markdown("""
     **Similar News**
     """)
-    st.table(news.head())
+    st.table(news2say)
 
-trainmodel()
 
 h = st.text_input("**Your News Headline:**")
 if st.button("Get"):
+    trainmodel()
     prediction(h)
     st.markdown(f"""
     :newspaper:
